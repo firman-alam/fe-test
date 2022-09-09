@@ -1,0 +1,10 @@
+.listBookmark {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+}

@@ -1,13 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #142978;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #142978;
+  font-size: 4em;
+  letter-spacing: 2px;
+}
+
+button {
+  /* margin: 0 10px;   */
+  background: transparent;
+  border: 3px solid linear-gradient(#1a2f7e 50.8%, #1143c2 83.68%);
+  padding: 10px;
+  color: #142978;
+  font-size: 0.8em;
+  cursor: pointer;
+  justify-content: center;
+}
+
+button:hover {
+  color: #3452c1;
+  border-color: #3452c1;
+}
+
+.content {
+  text-align: left;
+}
+
+.categories {
+  margin: 10px 0;
+}
+
+li {
+  color: rgb(68, 64, 64);
+}
+
+@media screen and (max-width: 650px) {
+  .App {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .App {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

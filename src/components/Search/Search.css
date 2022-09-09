@@ -1,0 +1,54 @@
+.search {
+  margin: 1.5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search > input {
+  width: 75%;
+  border: none;
+  border-bottom: 2px solid #142978;
+  color: #142978;
+  outline-style: none;
+  font-size: large;
+}
+
+.bookmark {
+  background: #142978;
+  color: white;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.bookmark:hover {
+  background: #2143c0;
+  color: white;
+  outline-style: none;
+}
+
+@media screen and (max-width: 900px) {
+  .search {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .search {
+    padding: 0 10px;
+    width: 90%;
+    display: flex;
+    gap: 10px;
+
+    font-size: 0.8rem;
+  }
+
+  .search > input {
+    font-size: 0.8rem;
+  }
+}

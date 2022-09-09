@@ -1,0 +1,27 @@
+.categories {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 650px) {
+  .categories {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .categories {
+    width: 100%;
+    margin: 0px 20px;
+    justify-content: center;
+    gap: 5px;
+  }
+}

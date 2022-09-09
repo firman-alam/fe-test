@@ -1,0 +1,4 @@
+.category > button {
+  border-radius: 10px;
+  word-break: keep-all;
+}

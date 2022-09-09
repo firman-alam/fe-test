@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Front-end Dev Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technology
 
-## Available Scripts
+- Redux Toolkit (state management)
+- RTK Query (fetching API)
+- MUI Icons (icons)
 
-In the project directory, you can run:
+## Requirement
 
-### `npm start`
+1. Menggunakan ReactJS. Typescript tidak keharusan, tapi akan jadi nilai plus
+2. Harus responsive dengan segala jenis device (mobile, tablet, laptop)
+3. Support pagination. User hanya ditunjukkan halaman yang dipilih. Halaman lain tidak akan diload jika tidak dibutuhkan
+4. Fitur bookmark local storage disediakan untuk user menge-pin buku favorit mereka
+5. Ketika user melihat list buku sebuah kategori, fitur pencarian dibutuhkan untuk membantu memudahkan menemukan buku berdasarkan judul dan author. Tidak disediakan API Search, user hanya diijinkan melakukan pencarian dari list yang sudah ditampilkan sebelumnya.
+6. Source code harus tersedia di github
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Link API Categories
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!--
+path    : /
+method  : GET
+desc    : mengembalikan list kategori yang tersedia
+-->
 
-### `npm test`
+https://asia-southeast2-sejutacita-app.cloudfunctions.net/fee-assessment-categories
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Link API Books
 
-### `npm run build`
+<!--
+path    : /
+method  : GET
+desc    : Terdapat 3 query params = categoryId, page, and size
+-->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://asia-southeast2-sejutacita-app.cloudfunctions.net/fee-assessment-books?categoryId=1&page=0&size=5
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Feedback untuk improve API - Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Cors issue, saya harus menggunakan plugin moeful cors untuk bisa mengakses API karena terhalang cors policy. Untuk sisi backend bisa diperbaiki tentang sistem cors-nya.
+2. Untuk API Categories, data yang dikirim ke sisi FE berupa text/plain bukan berupa JSON. Kedepannya data yang dikirim dalam bentuk JSON semua.
+3. Untuk query page bisa diperbaiki juga, karena walaupun tidak diberikan maksimal page yang ada.
+4. Untuk id data Category buku, tidak terurut angkanya. Akan susah jika kedepannya ada penambahan Category buku.
+5. Salah satu Category buku datanya kosong, difilter sebelum dikirim ke FE.
 
-### `npm run eject`
+## Notes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Terima kasih atas diberikannya kesempatan untuk test technical FE di perusahaan bapak/ibu. Mohon maaf saya kehabisan waktu sehingga ada beberapa fitur yang belum selesai. Saya akan belajar lagi agar bisa menyelesaikan masalah ini tepat waktu kedepannya.
